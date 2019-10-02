@@ -1,0 +1,100 @@
+
+  loading from "\\mac\OOD\Pro4\project4\project4\SaveFile"
+    Demo_Testreqs-1.dll
+ Loading succeed
+  TestReq 1 - Use C++ 
+------------------------------------------------------------------------
+Demonstrate by viewing files in project directory
+
+  passed -- "TestReq1"
+
+  TestReq 2 - Use Windows Presentation Foundation 
+------------------------------------------------------------------------
+Demonstrate by viewing files in project directory
+
+  passed -- "TestReq 2"
+
+  TestReq 3a - assemble parts from project #1. 
+------------------------------------------------------------------------
+Demonstrate by show including packages in Tester.cpp which invokes files created by project #1.
+
+  passed -- "TestReq3a"
+
+  TestReq 3b - assemble parts from project #2.
+---------------------------------------------------------------------------------------------------------------------------
+Demonstrate by showing files in the TestHarnessChild package created by project #2
+
+  passed -- "TestReq3b"
+
+  TestReq 3c - assemble parts from project #3.
+------------------------------------------------------------------------------------------
+Demonstrate by showing files in the Mother_server package created by project #3.
+Note: GUI clients can continue to send testrequests without any waiting. Playing in GUI client.
+
+  passed -- "TestReq3c"
+
+  TestReq 4a - Proving GRaphical User Interface (GUI) for Client.
+---------------------------------------------------------------------------------
+Demonstrate by displaying the begin of codes in MainWindow.xaml 
+Please, play with GUI client, when running.  
+
+  passed -- "TestReq4a"
+
+  TestReq 4b - Supporting selecting test libraries and send for testing.
+---------------------------------------------------------------------------------
+Demonstrate by displaying codes of selecting test dll and sending testrequest.
+Note: Selecting by clicking items in Files listbox and triggering Files_SelectionChanged(). 
+Sending files is triggered by click submit button on SelectionWindow, executing SendMessage(). 
+it Invokes CreateTestrequest(), CopyandSendFiles and SendingFiles() to help.
+Display Files_SelectionChanged() and SendMessage().
+
+  passed -- "TestReq4b"
+
+  TestReq 4c - Supporting displaying test Result.
+---------------------------------------------------------------------------------
+Demonstrate by displaying codes of showing testrequest message.
+Note: ProcessMessages() will continuely fetch message and trigger to show test result by matching command.
+
+  passed -- "TestReq4c"
+
+  TestReq 5 - Proving message design.
+---------------------------------------------------------------------------------------
+Demonstrate by displaying constructing massage code for sending files and testrequest. 
+
+  passed -- "TestReq5"
+
+  TestReq 6 - Proving sending TestRequest messages from Client to TestHarness Server.
+---------------------------------------------------------------------------------------
+Please Check SendMessage() which shows at Test 4b.
+
+  passed -- "TestReq6"
+
+    Demo_Testreqs-2.dll
+ Loading succeed
+  TestReq 7 - Supporting each testRequest executing in its own process pool child process.
+---------------------------------------------------------------------------------------
+Demonstrate by creating a TestRequest including Demo_Testreques_1 and Demo_Testreques_2. 
+Note: Once creating a testRequest, all of dlls are bonded and executed together 
+ at one and only one child tester process which assigned by server-mother
+The testrequest is created by Test1(). You can see the Demo_Testreques_1 and Demo_Testreques_2 running at the same child process.Here also show Test() code
+  passed -- "TestReq7"
+
+  TestReq8 - sending test results from child process to the client that made the request 
+------------------------------------------------------------------------
+Demonstrate by viewing parts of getTestrequest() which is constructing massage code in Tester.cpp.
+You can see test results return back at GUI clients which made test requests
+  passed -- "TestReq8"
+
+  TestReq 9 - Demonstrates correct test operations for two or more concurrent clients. 
+------------------------------------------------------------------------
+Demonstrate by running two clients at same time. one of is a demo client which will run Test1().
+This demo client only existed for demo. You can shut down after demo. 
+Notes: GUI client needs three parameters to exe. It will run version of demo when the third parameter is Demo
+
+  passed -- "TestReq9"
+
+  TestReq 10 - automated triggered.
+---------------------------------------------------------------------------------------------------------------------------
+Demonstrate by automating triggered Test() when running Demo version  
+
+  passed -- "TestReq10"

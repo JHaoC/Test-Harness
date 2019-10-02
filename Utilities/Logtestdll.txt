@@ -1,0 +1,4 @@
+
+ TestPasses prints by testlogger_.
+ This is a demo dll for single tast 
+end of log
